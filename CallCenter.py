@@ -31,8 +31,7 @@ class CallCenter(object):
             if self.calls[i].number == number:
                 self.calls.pop(i)
                 self.queue -= 1
-                break
+                return self
         print "Could not locate call"
-        return self
     def sortCalls(self):
         self.calls = sorted(self.calls, key=lambda call: call.time)
